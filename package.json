@@ -1,0 +1,22 @@
+{
+	"name": "github-bogger",
+	"version": "0.1.0",
+	"main": "main.js",
+	"devDependencies": {
+		"babel": "latest",
+		"babel-core": "latest",
+		"css-loader": "latest",
+		"electron-packager": "latest",
+		"electron-rebuild": "latest",
+		"less": "latest",
+		"less-loader": "latest",
+		"node-libs-browser": "latest",
+		"style-loader": "latest",
+   		"webpack": "latest",
+		"webpack-dev-server": "latest"
+	},
+	"dependencies": {
+		"electron-prebuilt": "latest",
+		"react": "latest"
+	}
+}
