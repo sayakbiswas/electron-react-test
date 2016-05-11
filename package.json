@@ -5,6 +5,12 @@
 	"devDependencies": {
 		"babel": "latest",
 		"babel-core": "latest",
+		"babel-loader": "latest",
+		"babel-preset-es2015": "latest",
+		"babel-preset-react": "latest",
+		"babel-runtime": "latest",
+		"babel-plugin-transform-runtime": "latest",
+		"babel-polyfill": "latest",
 		"css-loader": "latest",
 		"electron-packager": "latest",
 		"electron-rebuild": "latest",
@@ -17,6 +23,12 @@
 	},
 	"dependencies": {
 		"electron-prebuilt": "latest",
-		"react": "latest"
+		"react": "latest",
+		"react-dom": "latest"
+	},
+	"scripts": {
+		"start": "./node_modules/electron-prebuilt/dist/electron/electron .",
+		"watch": "./node_modules/.bin/webpack-dev-server",
+		"electron-rebuild": "./node_modules/.bin/electron-rebuild"
 	}
 }
