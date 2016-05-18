@@ -1,19 +1,28 @@
-var app = require('app');
-var browserWindow = require('browser-window');
+const electron = require('electron');
+const {app} = electron;
+const {BrowserWindow} = electron;
 
-require('crash-reporter').start();
+let win;
 
-app.on('window-all-closed', function() {
+function createWindow() {
+	win = new BrowserWindow({width: 800, height: 600});
+	win.loadURL('file://' + __dirname + '/public/index.html');
+	win.webContents.openDevTools();
+	win.on('closed', () => {
+		win = null;
+	});
+}
+
+app.on('window-all-closed', () => {
 	if(process.platform != 'darwin') {
 		app.quit();
 	}
 });
 
-app.on('ready', function() {
-	mainWindow = new browserWindow({width: 800, height: 600});
-	mainWindow.loadUrl('file://' + __dirname + '/public/index.html');
-	mainWindow.openDevTools();
-	mainWindow.on('closed', function() {
-		mainWindow = null;
-	});
+app.on('ready', createWindow);
+
+app.on('activate', () => {
+	if (win === null) {
+		createWindow();
+	}
 });

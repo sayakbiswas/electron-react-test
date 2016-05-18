@@ -11,7 +11,7 @@
 		"babel-runtime": "latest",
 		"babel-plugin-transform-runtime": "latest",
 		"babel-polyfill": "latest",
-		"css-loader": "latest",
+		"css-loader": "^0.18.0",
 		"electron-packager": "latest",
 		"electron-rebuild": "latest",
 		"less": "latest",
@@ -27,7 +27,7 @@
 		"react-dom": "latest"
 	},
 	"scripts": {
-		"start": "./node_modules/electron-prebuilt/dist/electron/electron .",
+		"start": "./node_modules/electron-prebuilt/dist/electron .",
 		"watch": "./node_modules/.bin/webpack-dev-server",
 		"electron-rebuild": "./node_modules/.bin/electron-rebuild"
 	}
